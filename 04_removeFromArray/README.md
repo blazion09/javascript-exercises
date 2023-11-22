@@ -13,4 +13,15 @@ The first test on this one is fairly easy, but there are a few things to think a
 - how to remove a single element from an array
 - how to deal with multiple optional arguments in a javascript function
 - [Check this link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments).  Scroll down to the bit about `Array.from` or the spread operator. - [Or this link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters).
-  
+
+1. INPUT string/number itemToRemove
+2. SEARCH for itemToRemove in an array and OUTPUT the index number indexToRemove
+3. SPLICE the indexToRemove
+4. RETURN the array
+for multiple string/number
+use for loop
+1. INPUT multiple string/number itemToRemove
+2. SEARCH for itemToRemove in an array and OUTPUT the index number indexToRemove
+3. SPLICE the indexToRemove
+4. RETURN the array
+5. loop back to 1 until all is done
