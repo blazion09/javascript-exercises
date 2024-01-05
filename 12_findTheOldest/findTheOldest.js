@@ -1,15 +1,24 @@
 const findTheOldest = function (people) {
-    const peopleAge = people.map((age) => age.yearOfDeath - age.yearOfBirth);
-    let indexHighestAge = peopleAge.indexOf(Math.max(...peopleAge));
-    console.log(people[indexHighestAge]);
+    return people.reduce((oldestPerson, currentPerson) => {
+        let oldest = getAge(oldestPerson.yearOfBirth, oldestPerson.yearOfDeath);
+        let current = getAge(currentPerson.yearOfBirth, currentPerson.yearOfDeath);
+        // return oldest < current ? currentAge : oldestAge;
+        if (current > oldest){
+            return currentPerson;
+        } else{
+            return oldestPerson;
+        }
+    })
 };
 
 const getAge = function (birth, death) {
-    if (!death) {
-        death = new Date().getFullYear();
+    const currentYear = new Date().getFullYear();
+    if (death){
+        return death - birth;
+    } else {
+        return currentYear - birth;
     }
-    return death - birth;
 }
-
+// new Date().getFullYear();
 // Do not edit below this line
 module.exports = findTheOldest;
